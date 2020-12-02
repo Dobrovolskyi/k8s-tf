@@ -17,11 +17,11 @@ resource "google_container_cluster" "hillel" {
   }
 }
 
-resource "google_container_node_pool" "default" {
+resource "google_container_node_pool" "hillel-node-pool" {
   name       = "${var.name}-node-pool"
   project    = var.project
   location   = var.location
-  cluster    = google_container_cluster.default.name
+  cluster    = google_container_cluster.hillel.name
   node_count = 1
 
   node_config {

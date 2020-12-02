@@ -4,7 +4,7 @@ terraform {
 
 provider "google" {
   version = "3.48.0"
-  project = "theta-signal-294917" # "{{YOUR GCP PROJECT}}"
+  project = "theta-signal-294917"
   region  = "europe-west1"
   zone    = "europe-west1-b"
 }

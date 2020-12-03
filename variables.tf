@@ -7,7 +7,7 @@ variable "project" {
 }
 
 variable "location" {
-  default = "europe-west3-a"
+  default = "europe-west1"
 }
 
 variable "initial_node_count" {

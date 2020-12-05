@@ -17,7 +17,7 @@ resource "kubernetes_deployment" "nginxdeploy" {
 
     strategy {
       type = "RollingUpdate"
-      rollingUpdate {
+      rolling_update {
         maxSurge       = 1
         maxUnavailable = 0
       }

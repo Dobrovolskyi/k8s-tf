@@ -1,3 +1,8 @@
+data "google_container_cluster" "hillel" {
+  name     = var.name
+  location = var.location
+}
+
 resource "kubernetes_deployment" "nginxdeploy" {
   metadata {
     name = "nginxdeploy"

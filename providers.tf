@@ -15,6 +15,6 @@ provider "kubernetes" {
   token            = data.google_client_config.default.access_token
 
   client_certificate     = base64decode(google_container_cluster.hillel.master_auth[0].client_certificate)
-  client_key             = base64decode(google_container_cluster.hillil.master_auth[0].client_key)
+  client_key             = base64decode(google_container_cluster.hillel.master_auth[0].client_key)
   cluster_ca_certificate = base64decode(google_container_cluster.hillel.master_auth[0].cluster_ca_certificate)
 }

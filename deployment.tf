@@ -34,6 +34,9 @@ resource "kubernetes_deployment" "nginxdeploy" {
         container {
           image = "nginx:1.18.0"
           name  = "nginx"
+          port {
+            container_port = 80
+          }
 
           liveness_probe {
             http_get {

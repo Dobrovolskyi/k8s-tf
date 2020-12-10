@@ -3,6 +3,8 @@ data "google_container_cluster" "hillel" {
   location = var.location
 }
 
+data "google_client_config" "default" {}
+
 resource "kubernetes_deployment" "nginxdeploy" {
   metadata {
     name = "nginxdeploy"

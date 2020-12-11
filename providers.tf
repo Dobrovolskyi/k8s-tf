@@ -5,8 +5,7 @@ terraform {
 provider "google" {
   version = "3.48.0"
   project = var.project
-  region  = var.location.region
-  zone    = var.location.zone
+  region  = var.location
 }
 
 provider "kubernetes" {

@@ -2,7 +2,7 @@ resource "google_container_cluster" "primary" {
   name        = var.name
   project     = var.project
   description = "DevOps course GKE Cluster"
-  location    = var.location.zone
+  location    = var.location
 
   remove_default_node_pool = true
   initial_node_count       = var.initial_node_count
@@ -17,7 +17,7 @@ resource "google_container_cluster" "primary" {
 resource "google_container_node_pool" "primary-node-pool" {
   name       = "${var.name}-node-pool"
   project    = var.project
-  location   = var.location.zone
+  location   = var.location
   cluster    = google_container_cluster.primary.name
   node_count = var.initial_node_count
 

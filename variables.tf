@@ -1,5 +1,5 @@
 variable "name" {
-  default = "devops-course-cluster"
+  default = "devops-course"
 }
 
 variable "project" {
@@ -7,8 +7,7 @@ variable "project" {
 }
 
 variable "location" {
-  region = "europe-west1"
-  zone   = "europe-west1-b"
+  default = "europe-west1"
 }
 
 variable "initial_node_count" {

@@ -1,4 +1,4 @@
-data "google_container_cluster" "hillel" {
+data "google_container_cluster" "primary" {
   name     = var.name
   location = var.location
 }

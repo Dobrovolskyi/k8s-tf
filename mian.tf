@@ -1,8 +1,8 @@
-resource "google_container_cluster" "hillel" {
+resource "google_container_cluster" "primary" {
   name        = var.name
   project     = var.project
   description = "DevOps course GKE Cluster"
-  location    = var.location
+  location    = var.location.zone
 
   remove_default_node_pool = true
   initial_node_count       = var.initial_node_count
@@ -14,12 +14,12 @@ resource "google_container_cluster" "hillel" {
   }
 }
 
-resource "google_container_node_pool" "hillel-node-pool" {
+resource "google_container_node_pool" "primary-node-pool" {
   name       = "${var.name}-node-pool"
   project    = var.project
-  location   = var.location
-  cluster    = google_container_cluster.hillel.name
-  node_count = 1
+  location   = var.location.zone
+  cluster    = google_container_cluster.primary.name
+  node_count = var.initial_node_count
 
   node_config {
     preemptible  = true

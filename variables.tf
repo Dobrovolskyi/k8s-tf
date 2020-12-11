@@ -7,13 +7,14 @@ variable "project" {
 }
 
 variable "location" {
-  default = "europe-west1"
+  region = "europe-west1"
+  zone   = "europe-west1-b"
 }
 
 variable "initial_node_count" {
-  default = 1
+  default = 3
 }
 
 variable "machine_type" {
-  default = "e2-micro"
+  default = "e2-standard-2"
 }
